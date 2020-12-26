@@ -27,10 +27,11 @@ public class Simulation {
 			throw new EvenNumberException();
 			}finally {
 				in.close();  // close resource, prevent leaks.
+				System.out.println("Only ran in finally clause.");
 			}
 			
 		}
-		
+		System.out.println("Not run if EvenNumberException is thrown!");
 		//close resources
 		in.close();
 	}
